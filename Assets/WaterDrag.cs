@@ -49,4 +49,15 @@ public class WaterDrag : MonoBehaviour
             dragging = false;
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "tree") 
+        {
+            Debug.Log("watering da treeeeeeee");
+            if (!dragging)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 }
