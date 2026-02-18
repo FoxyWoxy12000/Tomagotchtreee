@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 518470621}
   m_Layer: 0
   m_Name: WaterSpawner
-  m_TagString: Untagged
+  m_TagString: WaterSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,6 +602,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2991792047147861527, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991792047147861527, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
+      propertyPath: m_Color.b
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991792047147861527, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991792047147861527, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6622662573697415092, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
       propertyPath: m_Name
       value: water
