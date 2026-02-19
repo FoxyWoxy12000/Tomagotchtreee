@@ -22,12 +22,12 @@ public class WaterDrag : MonoBehaviour
         Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
         Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, 0));
         mousePos.z = -1;
-
+        
         RaycastHit2D hitt = Physics2D.Raycast(mousePos, Vector2.zero);
         if (hitt.collider != null && hitt.collider.gameObject == this.gameObject)
         {
-            this.gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-            spriteRendererrr.color = new Color(0f, 206, 255, 255);
+            this.gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            spriteRendererrr.color = new Color32(0, 206, 255, 255);
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
                 Debug.Log("GRABBED " + gameObject.name);
@@ -38,7 +38,7 @@ public class WaterDrag : MonoBehaviour
         } else
         {
             this.gameObject.transform.localScale = new Vector3(1, 1, 1);
-            spriteRendererrr.color = new Color(0f, 170, 211, 255);
+            spriteRendererrr.color = new Color32(0, 170, 211, 255);
         }
 
         /*// When mouse button pressed down
@@ -61,7 +61,7 @@ public class WaterDrag : MonoBehaviour
         {
             transform.position = mousePos + offset;
             this.gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-            spriteRendererrr.color = new Color(0,11,138,255);
+            spriteRendererrr.color = new Color32(0,11,138,255);
         }
 
         // When mouse button released
@@ -71,7 +71,7 @@ public class WaterDrag : MonoBehaviour
             {
                 Debug.Log("RELEASED " + gameObject.name);
                 this.gameObject.transform.localScale = new Vector3(1,1,1);
-                spriteRendererrr.color = new Color(0f,170,211,255);
+                spriteRendererrr.color = new Color32(0,170,211,255);
             }
             dragging = false;
         }
