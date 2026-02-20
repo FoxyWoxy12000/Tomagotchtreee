@@ -17,7 +17,7 @@ public class WaterSpawner : MonoBehaviour
     }
     public void SpawnNewWater()
     {
-        WaterSpawnLocation = new Vector2(Random.Range(-8.28f, 8.28f), Random.Range(-4.4f, 4.4f));
+        WaterSpawnLocation = new Vector3(Random.Range(-8.28f, 8.28f), Random.Range(-4.4f, 4.4f), -1);
         Instantiate(Water, WaterSpawnLocation, Quaternion.identity);
     }
 }
