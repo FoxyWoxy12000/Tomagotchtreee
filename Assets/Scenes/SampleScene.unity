@@ -150,6 +150,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Water: {fileID: 6622662573697415092, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
   WaterSpawnLocation: {x: 0, y: 0}
+  minX: -8.28
+  maxX: 8.28
+  minY: -4.4
+  maxY: 4.4
+  minDistanceFromTree: 1.5
 --- !u!4 &518470622
 Transform:
   m_ObjectHideFlags: 0
@@ -622,6 +627,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: water
       objectReference: {fileID: 0}
+    - target: {fileID: 7327981055489444157, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
+      propertyPath: waterDripParticle
+      value: 
+      objectReference: {fileID: 2599639534632942230, guid: 683bba02a206154448df9065e6d38e78, type: 3}
+    - target: {fileID: 7327981055489444157, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
+      propertyPath: waterBurstParticle
+      value: 
+      objectReference: {fileID: 919200362225101420, guid: 70e155f5e16cc1a44992ce892afc5cc8, type: 3}
     - target: {fileID: 8674835376035083767, guid: c3ebdfa13a76c624b94100a622079b05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
