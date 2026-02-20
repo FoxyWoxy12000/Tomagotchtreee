@@ -132,8 +132,8 @@ public class WaterDrag : MonoBehaviour
         if (hitt.collider != null && hitt.collider.gameObject == this.gameObject)
         {
             // NEW: Smooth tween instead of instant change
-            TweenScale(new Vector3(1.2f, 1.2f, 1.2f), 0.1f);
-            TweenColor(new Color32(0, 206, 255, 255), 0.1f);
+            TweenScale(new Vector3(1.2f, 1.2f, 1.2f), 0.08f);
+            TweenColor(new Color32(0, 206, 255, 255), 0.08f);
 
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
@@ -161,6 +161,10 @@ public class WaterDrag : MonoBehaviour
 
             TweenScale(new Vector3(1.5f, 1.5f, 1.5f), 0.08f);
             TweenColor(new Color32(0, 11, 138, 255), 0.08f);
+
+            // NEW: Add subtle wobble to make it feel like water
+            float wobble = Mathf.Sin(Time.time * 10f) * 5f; // Wobbles between -5 and +5 degrees
+            transform.rotation = Quaternion.Euler(0, 0, wobble);
         }
 
         // When mouse button released
@@ -183,6 +187,8 @@ public class WaterDrag : MonoBehaviour
             Debug.Log("watering da treeeeeeee");
             if (!dragging)
             {
+                TweenScale(new Vector3(0f, 0f, 0f), 0.2f);
+                TweenColor(new Color32(0, 170, 211, 0), 0.2f);
                 waterscrippy.SpawnNewWater();
                 Destroy(this.gameObject);
             }
