@@ -41,7 +41,7 @@ public class WaterDrag : MonoBehaviour
         if (hitt.collider != null && hitt.collider.gameObject == this.gameObject)
         {
             TweenScale(new Vector3(1.2f, 1.2f, 1.2f), 0.1f);
-            TweenColor(new Color32(0, 206, 255, 255), 0.1f);
+            TweenColor(new Color32(108, 227, 255, 255), 0.1f);
 
             if (Mouse.current.leftButton.wasPressedThisFrame)
             {
